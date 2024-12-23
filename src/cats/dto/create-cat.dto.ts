@@ -1,4 +1,5 @@
 import { IsString, IsInt, Min } from 'class-validator';
+import { Owner } from 'src/owners/interfaces/owner.interface';
 
 export class CreateCatDto {
     @IsString()
@@ -10,4 +11,6 @@ export class CreateCatDto {
 
     @IsString()
     breed: string;
+
+    owner: Owner;
 }

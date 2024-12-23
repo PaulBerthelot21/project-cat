@@ -4,10 +4,13 @@ import { AppService } from './app.service';
 import { CatsModule } from './cats/cats.module';
 import { CatsController } from './cats/cats.controller';
 import { CatsService } from './cats/cats.service';
+import { OwnersService } from './owners/owners.service';
+import { OwnersController } from './owners/owners.controller';
+import { OwnersModule } from './owners/owners.module';
 
 @Module({
-  imports: [CatsModule],
-  controllers: [AppController, CatsController],
-  providers: [AppService, CatsService],
+  imports: [CatsModule, OwnersModule],
+  controllers: [AppController, CatsController, OwnersController],
+  providers: [AppService, CatsService, OwnersService],
 })
 export class AppModule {}
